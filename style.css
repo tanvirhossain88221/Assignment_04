@@ -127,3 +127,18 @@ a.active {
   margin-left: 2px;
   color: #3352f2;
 }
+
+/* thank You section */
+#thank-you-section {
+  display: none;
+  text-align: center;
+  padding: 200px;
+}
+#thank-you-text {
+  color: white;
+}
+#thank-you-msz {
+  margin-top: 20px;
+  color: white;
+  font-weight: 400;
+}

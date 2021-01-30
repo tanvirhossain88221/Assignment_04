@@ -29,83 +29,92 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+    <div id="booking-section">
+        <main class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <input id="first-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handlePriceChange('first', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="handlePriceChange('first', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handlePriceChange('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="handlePriceChange('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p id="subtotal-price">$0</p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p id="vat-amount">$0</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="grand-total">$0</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="booking" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="first-count" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="handlePriceChange('first', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="handlePriceChange('first', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                </div>
+    
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
             </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="handlePriceChange('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="handlePriceChange('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p id="subtotal-price">$0</p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p id="vat-amount">$0</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p id="grand-total">$0</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
+    </div>
+    <!-- Thank You Section -->
+    <div id="thank-you-section">
+        <div>
+            <h1 id="thank-you-text">THANK YOU FOR TRAVELLING WITH US</h1>
+            <p id="thank-you-msz">Thank you for booking your Journey with us. We are glad that you enjoyed your Journey <br> and we look forward to your next Hassle-Free Journey with us! <br> <span style="color: red;">❤</span> </p>
         </div>
-
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
-        </div>
+    </div>
         <script>
             function handlePriceChange(price, isIncrease) {
                 
@@ -146,6 +155,16 @@
                 const ticketCount = parseInt(ticketInput.value);
                 return ticketCount
             }
+            
+            // Thank You Section
+            const bookingBtn = document.getElementById("booking");
+            bookingBtn.addEventListener("click", function(){
+            const bookingSection = document.getElementById("booking-section");
+            bookingSection.style.display = "none" ;
+            const thankYouSection = document.getElementById("thank-you-section");
+            thankYouSection.style.display = "block";
+            })
+
         </script>
     </section>
 
